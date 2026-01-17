@@ -1,0 +1,224 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Simonetta:ital,wght@0,400;0,900;1,400;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    /* COLOR / ICONS */
+
+    --menu: #FAA630;
+    --icon-whatsapp: #1CF941;
+    --icon-instagram: #FA2800;
+
+    /* NOME-CANTOR / GRADIENTE */
+
+    --gradient-text: linear-gradient(
+        to right,
+        #FAD72F,
+        #FABE2F,
+        #FAA630,
+        #FA5F2F
+        );
+
+    /* BUTTON / GRADIENTE */
+
+    --button-gradiente: linear-gradient(
+        to right,
+        #23CF48,
+        #23CF48,
+        #00F936,
+        #8EFA00
+    );
+
+    /* BUTTON / GRADIENTE - REVERSE */
+
+    --button-gradiente-hover: linear-gradient(
+        to right,
+        #68b307,
+        #06a729,
+        #16792c,
+        #0d4419
+    );
+
+    /* FONTS */
+
+    --font-biografia: "Charm", cursive;
+    --font-nome: "Rubik", sans-serif;
+    --font-subtitulo: "Simonetta", serif;
+}
+
+/* == GRUPO-NAVBAR (BARRA DE NAVEGAÇÃO) == */
+
+.grupo-navbar {
+    background-color: rgba(102, 37, 7, 0.075);
+    padding: 1.8rem;
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* == COLORS / ICONS == */
+
+#menu-hamburguer {
+    color: var(--menu);
+}
+#whatsapp {
+    color: var(--icon-whatsapp);
+}
+#instagram {
+    color: var(--icon-instagram);
+}
+
+/* == HEADER / CABEÇALHO == */
+header.cabecalho {
+    background: url(imagens/fundo-header.jpg) no-repeat center/cover;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* == SECTION / HERO == */
+
+.hero {
+    width: 70%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* == DIV / NOME-CANTOR == */
+
+.nome-cantor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* == NOME / CANTOR */
+
+.h1-gradiente {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    font-size: 5rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+
+
+/* == PARAGRAFO / SUBTITULO == */
+
+.nome-cantor .subtitulo {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-family: var(--font-subtitulo);
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+/* == BUTTON / HERO == */ 
+
+.btn-hero {
+    background: var(--button-gradiente);
+    width: 250px;
+    height: 50px;
+
+    border-radius: 25px;
+    border: none;
+
+    font-family: var(--font-subtitulo);
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+
+    cursor: pointer;
+}
+
+/* == SECTION / SOBRE-CANTOR == */
+
+section.sobre-cantor {
+    background: url(imagens/fundo-cantor.jpg) no-repeat center/cover;
+    height: 100vh;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+
+    position: relative;
+
+}
+
+/* == PARAGRAFO / BIOGRAFIA == */
+
+.biografia {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+
+    font-family: var(--font-biografia);
+    font-size: 1.3rem;
+    font-weight: 400;
+
+    color: white;
+    width: 50%;
+    text-align: left;
+    line-height: 1.5rem;
+}
+
+/* == IMAGEM / CANTOR == */
+
+.cantor-jampier {
+    width: 50%;
+    object-fit: cover;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/* == SECTION / VALORES == */
+
+.valores {
+    
+    padding: 2rem;
+}
+
+.pacotes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.completo, 
+.standard,
+.simples {
+    background: black;
+    color: white;
+    width: 300px;
+    height: 350px;
+
+    padding: 1rem;
+}
