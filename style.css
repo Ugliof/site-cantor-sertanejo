@@ -11,6 +11,10 @@
 
 :root {
 
+    /* NAVBAR / COLOR */
+
+    --navbar-background: rgba(49, 2, 2, 0.082);
+
     /* COLOR / ICONS */
 
     --menu: #FAA630;
@@ -21,30 +25,18 @@
 
     --gradient-text: linear-gradient(
         to right,
-        #FAD72F,
-        #FABE2F,
-        #FAA630,
-        #FA5F2F
+        #ddd235,
+        #eef85e,
+        #999b0c,
+        #353203
         );
 
     /* BUTTON / GRADIENTE */
 
     --button-gradiente: linear-gradient(
         to right,
-        #23CF48,
-        #23CF48,
-        #00F936,
-        #8EFA00
-    );
-
-    /* BUTTON / GRADIENTE - REVERSE */
-
-    --button-gradiente-hover: linear-gradient(
-        to right,
-        #68b307,
-        #06a729,
-        #16792c,
-        #0d4419
+        #08b308,
+        #32fa00
     );
 
     /* FONTS */
@@ -54,10 +46,15 @@
     --font-subtitulo: "Simonetta", serif;
 }
 
+body {
+    font-family: var(--font-subtitulo);
+    
+}
+
 /* == GRUPO-NAVBAR (BARRA DE NAVEGAÇÃO) == */
 
 .grupo-navbar {
-    background-color: rgba(102, 37, 7, 0.075);
+    background-color: var(--navbar-background);
     padding: 1.8rem;
     width: 100%;
 
@@ -84,7 +81,7 @@
 
 /* == HEADER / CABEÇALHO == */
 header.cabecalho {
-    background: url(imagens/fundo-header.jpg) no-repeat center/cover;
+    background: url(imagens/fundo-header.png) no-repeat center/cover;
     height: 100vh;
 
     display: flex;
@@ -105,7 +102,7 @@ header.cabecalho {
 
 /* == DIV / NOME-CANTOR == */
 
-.nome-cantor {
+.grupo-titulo-subtitulo {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -118,16 +115,15 @@ header.cabecalho {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     
+    font-family: var(--font-nome);
     font-size: 5rem;
     font-weight: bold;
-    letter-spacing: 4px;
+    letter-spacing: 16px;
 }
-
-
 
 /* == PARAGRAFO / SUBTITULO == */
 
-.nome-cantor .subtitulo {
+.subtitulo {
     background: var(--gradient-text);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -159,7 +155,7 @@ header.cabecalho {
 /* == SECTION / SOBRE-CANTOR == */
 
 section.sobre-cantor {
-    background: url(imagens/fundo-cantor.jpg) no-repeat center/cover;
+    background: url(imagens/fundo-cantor.png) no-repeat left/cover;
     height: 100vh;
 
     display: flex;
@@ -167,7 +163,6 @@ section.sobre-cantor {
     padding: 2rem;
 
     position: relative;
-
 }
 
 /* == PARAGRAFO / BIOGRAFIA == */
@@ -202,23 +197,133 @@ section.sobre-cantor {
 /* == SECTION / VALORES == */
 
 .valores {
-    
+    background: url(imagens/fundo-valores.png) no-repeat center/cover;
+
+    height: 100vh;
     padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
+
+/* == H2 / VALORES & PACOTES == */
+
+.valores h2 {
+    color: white;
+
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* == SPAN / COLOR TEXTO H2 (GRADIENTE) */
+
+.color-texto-h2 {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* == SUBTITULO-VALORES == */
+
+.subtitulo-valores {
+    color: white;
+    margin-bottom: 1.5rem;
+    
+    font-size: 1.3rem;
+}
+
+/* == DIV / PACOTES (COMPLETO, STANDARD, SIMPLES) == */
 
 .pacotes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 40px;
 }
+
+.pacotes h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    text-align: center;
+    margin-bottom: 1.3rem;
+}
+
+/* == PACOTES (COMPLETO, STANDARD, SIMPLES) == */
 
 .completo, 
 .standard,
 .simples {
-    background: black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+    background: rgba(34, 34, 34, 0.192);
     color: white;
+
     width: 300px;
     height: 350px;
+    padding: 2rem;
 
-    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 1px 2px rgba(243, 242, 242, 0.096);
 }
+
+/* == DESCRIÇÃO DOS PACOTES == */
+
+.descricao-pacotes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* == VALOR DO PACOTE == */
+
+.valor-pacote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.valor {
+    color: rgb(228, 195, 8);
+
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.btn-contratar {
+    background: var(--button-gradiente);
+    width: 90%;
+
+    font-family: var(--font-subtitulo);
+    font-size: 1.5rem;
+    font-weight: 600;
+    
+    padding: 0.3rem;
+    border: none;
+    border-radius: 25px;
+}
+
+section.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+    background: url(imagens/fundo-formulario.jpeg) no-repeat bottom/cover;
+    height: 100vh;
+
+    padding: 1.5rem;
+}
+
+
+

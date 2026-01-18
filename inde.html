@@ -11,19 +11,29 @@
 <body>
     <header class="cabecalho">
         <div class="grupo-navbar">
+
+            <!-- ICON / HAMBURGUER -->
             <div class="menu">
                 <i class="fa-solid fa-bars fa-2x" id="menu-hamburguer"></i>
             </div>
             
+            <!-- ICONS / REDES SOCIAIS -->
             <nav class="redes-socias">
+
+                <!-- WHATSAPP -->
                 <a href="#" id="whatsapp"><i class="fa-brands fa-whatsapp fa-2x"></i></a>
+
+                <!-- INSTAGRAM -->
                 <a href="#" id="instagram"><i class="fa-brands fa-instagram fa-2x"></i></a>
+
+                <!-- FACEBOOK -->
                 <a href="#" id="facebook"><i class="fa-brands fa-facebook fa-2x"></i></a>
             </nav>
         </div>
 
+        <!-- NOME DO CANTOR E BOTÃO DE AGENDAMENTO -->
         <section class="hero">
-            <div class="nome-cantor">
+            <div class="grupo-titulo-subtitulo">
                 <h1 class="h1-gradiente">
                     JAMPIER
                 </h1>
@@ -38,6 +48,7 @@
         </section>
     </header>
 
+    <!-- SEÇÃO SOBRE O CANTOR -->
     <section class="sobre-cantor">
         <div class="biografia">
             <p>
@@ -53,82 +64,165 @@
             </p>
         </div>
 
+        <!-- IMAGEM DO CANTOR -->
         <img src="imagens/cantor.png" alt="cantor Jampier" class="cantor-jampier">
     </section>
 
+    <!-- SEÇÃO VALORES DOS PACOTES -->
     <section class="valores">
     <h2>
-        VALORES E PACOTES
+        VALORES  
+        <span class="color-texto-h2">
+           & PACOTES
+        </span>
     </h2>
 
-    <p>
+    <p class="subtitulo-valores">
         Escolha o pacote que melhor atende seu evento
     </p>
 
+    <!-- PACOTES (COMPLETO, STANDARD, SIMPLES) -->
     <div class="pacotes">
+
+        <!-- PACOTE COMPLETO -->
         <article class="completo">
-            <h3>
+            
+            <div class="descricao-pacotes">
+                <h3>
                 PACK SHOW COMPLETO
-            </h3>
-            <span class="descricao-pacote">
-                2 Horas com banda
-            </span>
-            <span class="descricao-pacote">
-                Musicas a vontade
-            </span>
-            <span class="descricao-pacote">
-                Equipamentos icluisos
-            </span>
-            <span class="valor">
-                R$ 5.000
-            </span>
-            <button type="button" class="btn-valores">
-                AGENDAR
-            </button>
+                </h3>
+
+                <span class="detalhes-pacotes">
+                    2 Horas com banda
+                </span>
+
+                <span class="detalhes-pacotes">
+                    Musicas a vontade
+                </span>
+
+                <span class="detalhes-pacotes">
+                    Equipamentos icluisos
+                </span>
+            </div>
+
+            <div class="valor-pacote">
+                <span class="valor">
+                    R$ 5.000
+                </span>
+                <button type="button" class="btn-contratar">
+                    CONTRATAR
+                </button>
+            </div>
         </article>
+
+        <!-- PACOTE STANDARD -->
         <article class="standard">
-            <h3>
-                PACK SHOW COMPLETO
-            </h3>
-            <span class="descricao-pacote">
-                2 Horas com banda
-            </span>
-            <span class="descricao-pacote">
-                Musicas a vontade
-            </span>
-            <span class="descricao-pacote">
-                Equipamentos icluisos
-            </span>
-            <span class="valor">
-                R$ 5.000
-            </span>
-            <button type="button" class="btn-valores">
-                AGENDAR
-            </button>
+            <div class="descricao-pacotes">
+                <h3>
+                PACK SHOW STANDARD
+                </h3>
+
+                <span class="detalhes-pacotes">
+                    2 Horas com banda
+                </span>
+
+                <span class="detalhes-pacotes">
+                    Musicas a vontade
+                </span>
+
+                <span class="detalhes-pacotes">
+                    Equipamentos icluisos
+                </span>
+            </div>
+
+            <div class="valor-pacote">
+                <span class="valor">
+                    R$ 5.000
+                </span>
+                <button type="button" class="btn-contratar">
+                    CONTRATAR
+                </button>
+            </div>
         </article>
+
+        <!-- PACOTE SIMPLES -->
         <article class="simples">
-            <h3>
-                PACK SHOW COMPLETO
-            </h3>
-            <span class="descricao-pacote">
-                2 Horas com banda
-            </span>
-            <span class="descricao-pacote">
-                Musicas a vontade
-            </span>
-            <span class="descricao-pacote">
-                Equipamentos icluisos
-            </span>
-            <span class="valor">
-                R$ 5.000
-            </span>
-            <button type="button" class="btn-valores">
-                AGENDAR
-            </button>
+            <div class="descricao-pacotes">
+                <h3>
+                PACK SHOW SIMPLES
+                </h3>
+
+                <span class="detalhes-pacotes">
+                    2 Horas com banda
+                </span>
+
+                <span class="detalhes-pacotes">
+                    Musicas a vontade
+                </span>
+
+                <span class="detalhes-pacotes">
+                    Equipamentos icluisos
+                </span>
+            </div>
+
+            <div class="valor-pacote">
+                <span class="valor">
+                    R$ 5.000
+                </span>
+                <button type="button" class="btn-contratar">
+                    COTRATAR
+                </button>
+            </div>
         </article>
     </div>
-
     </section>
 
+    <section id="formulario" class="formulario">
+        <h2>
+            Solicitar Orçamento
+        </h2>
+
+        <form action="" method="post">
+            <div class="campo">
+
+            <label for="inome">Nome:</label> 
+            <input type="text" name="nome" id="inome" placeholder="Nome completo" required>
+
+            </div>
+            
+            <div class="campos">
+
+                <label for="iwhat">Whatsapp:</label>
+                <input type="tel" name="whatsapp" id="iwhat" placeholder="Número para contato">
+
+            </div>
+
+            <div class="campos">
+
+                <label for="ipacote">Pacote escolhio:</label>
+                <input type="text" name="pacote" id="ipacote" placeholder="Selecione um pacote acima" readonly required>
+                <small>O pacote é definido a partir da sua escolha acima.</small>
+            </div>
+
+            <div class="campos">
+
+                <label for="idata">Data do evento:</label>
+                <input type="date" name="data" id="idata" required>
+            </div>
+
+            <div class="campos">
+
+                <label for="ilocal">Local:</label>
+                <input type="text" name="loca" id="ilocal" placeholder="Onde será o evento" required>
+            </div>
+
+            <div class="campos">
+
+                <label for="imens">Mensagem:</label>
+                <textarea name="mensagem" id="imens" placeholder="Digite se tiver duvidas!"></textarea>
+            </div>
+            
+        </form>
+    </section>
 </body>
 </html>
