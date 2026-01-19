@@ -48,6 +48,12 @@
 
 body {
     font-family: var(--font-subtitulo);
+    overflow-x: hidden;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /* == GRUPO-NAVBAR (BARRA DE NAVEGAÇÃO) == */
@@ -118,7 +124,7 @@ header.cabecalho {
     font-family: var(--font-nome);
     font-size: 5rem;
     font-weight: bold;
-    letter-spacing: 16px;
+    letter-spacing: 6px;
 }
 
 /* == PARAGRAFO / SUBTITULO == */
@@ -422,6 +428,10 @@ div.button-formulario {
         justify-content: center;
         align-items: center;
         gap: 30px;
+
+        width: 100%;
+        min-height: 100svh;
+        padding: 0 1rem;
     }
 
     /* == H1 / JAMPIER */
@@ -433,13 +443,15 @@ div.button-formulario {
     /* == BUTTON-AGENDAR == */
 
     .hero > .btn-agendar {
-        width: 65%;
+        width: 50%;
         height: 40px;
     }
 
     /* ----- SEÇÃO SOBRE O CANTOR ------- */
 
     section.sobre-cantor {
+        display: flex;
+        flex-direction: column;
         justify-content: center;
     }
 
@@ -498,6 +510,38 @@ div.button-formulario {
 
     .btn-agendar {
         width: 40%;
+    }
+
+   .biografia {
+        line-height: 2rem;
+        width: 100%;
+        gap: 20px;
+    }
+
+    img.cantor-jampier {
+        display: none;
+    }
+
+    .pacotes{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .completo,
+    .standard,
+    .simples {
+        width: 450px;
+    }
+
+    .descricao-pacotes h3 {
+        font-size: 1.6rem;
+    }
+
+    .detalhes-pacotes {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1rem;
     }
 }
 
