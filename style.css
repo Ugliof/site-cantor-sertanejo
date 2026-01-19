@@ -72,6 +72,10 @@ html, body {
     align-items: center;
 }
 
+.menu-mobile {
+    display: none;
+}
+
 /* == COLORS / ICONS == */
 
 #menu-hamburguer {
