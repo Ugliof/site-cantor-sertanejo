@@ -13,7 +13,7 @@
 
     /* NAVBAR / COLOR */
 
-    --navbar-background: rgba(49, 2, 2, 0.082);
+    --navbar-background: rgba(0, 0, 0, 0.288);
 
     /* COLOR / ICONS */
 
@@ -60,7 +60,7 @@ html, body {
 
 .grupo-navbar {
     background-color: var(--navbar-background);
-    padding: 1.8rem;
+    padding: 2rem 4rem;
     width: 100%;
 
     position: fixed;
@@ -72,6 +72,37 @@ html, body {
     align-items: center;
 }
 
+/* == MENU / ICON == */
+
+.menu {
+    display: none;
+}
+
+/* == LISTA NÃO ORDENADA / UL == */
+
+.menu-mobile ul {
+    display: flex;
+    gap: 45px;
+
+    list-style: none;
+}
+
+/* == LINKS DA LISTA == */
+
+.menu-mobile a {
+    color: #fff;
+    text-decoration: none;
+
+    font-family: var(--font-subtitulo);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.menu-mobile a:hover {
+    text-decoration: underline;
+}
+
+
 /* == COLORS / ICONS == */
 
 #menu-hamburguer {
@@ -82,6 +113,20 @@ html, body {
 }
 #instagram {
     color: var(--icon-instagram);
+}
+
+/* == ICONS / HOVER == */
+
+#whatsapp:hover {
+    color: #08b308;
+}
+
+#instagram:hover {
+    color: #a51e03;
+}
+
+#facebook:hover {
+    color: darkblue;
 }
 
 /* == HEADER / CABEÇALHO == */
@@ -178,6 +223,7 @@ section.sobre-cantor {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    gap: 20px;
     
 
     font-family: var(--font-biografia);
@@ -203,7 +249,7 @@ section.sobre-cantor {
 
 /* == SECTION / VALORES == */
 
-.valores {
+section.valores {
     background: url(imagens/fundo-valores.png) no-repeat center/cover;
     min-height: 100vh;
     padding: 2rem;
@@ -213,6 +259,7 @@ section.sobre-cantor {
     justify-content: center;
     align-items: center;
     gap: 20px;
+
 }
 
 /* == H2 / VALORES & PACOTES == */
@@ -306,7 +353,7 @@ section.sobre-cantor {
     font-weight: 600;
 }
 
-/* == BOTÃO / CONTRATAR == */
+/* == BUTTON / CONTRATAR == */
 
 .btn-contratar {
     background: var(--button-gradiente);
@@ -416,9 +463,61 @@ div.button-formulario {
     border-radius: 25px;
 }
 
-/* --------- MEDIA QUERY / MOBILE --------- */
+/*  MEDIA QUERY (TELAS GRANDES) */
 
-@media screen and (max-width: 668px) {
+@media screen and (max-width: 884px) {
+    .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .btn-agendar {
+        width: 40%;
+    }
+
+   .biografia {
+        line-height: 2rem;
+        width: 100%;
+        gap: 20px;
+    }
+
+    img.cantor-jampier {
+        display: none;
+    }
+
+    .completo,
+    .standard,
+    .simples {
+        width: 100%;
+    }
+
+    .descricao-pacotes h3 {
+        font-size: 1.3rem;
+    }
+
+    .detalhes-pacotes {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        font-size: 1rem;
+    }
+
+    .valor {
+        font-size: 1.4rem;
+        margin-top: 1rem;
+    }
+
+    .btn-contratar {
+        font-size: 1rem;
+    }
+}
+
+/* MEDIA QUERY (TELAS MENORES - MOBILE) */
+
+@media screen and (max-width: 768px) {
 
     /* --------- SEÇÃO HERO ----------- */
 
@@ -434,6 +533,13 @@ div.button-formulario {
         padding: 0 1rem;
     }
 
+    /* == ICON / MENU HAMBURGUINHO == */
+
+    .menu {
+        display: block;
+        cursor: pointer;
+    }
+
     /* == H1 / JAMPIER */
 
     .hero h1 {
@@ -443,11 +549,11 @@ div.button-formulario {
     /* == BUTTON-AGENDAR == */
 
     .hero > .btn-agendar {
-        width: 50%;
+        width: 40%;
         height: 40px;
     }
 
-    /* ----- SEÇÃO SOBRE O CANTOR ------- */
+    /* ----- SEÇÃO SOBRE O CANTOR ----- */
 
     section.sobre-cantor {
         display: flex;
@@ -498,52 +604,14 @@ div.button-formulario {
         font-weight: bold;
         width: 100%;
     }
-}
 
-@media screen and (max-width: 1048px) {
-    .hero {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 30px;
-    }
-
-    .btn-agendar {
-        width: 40%;
-    }
-
-   .biografia {
-        line-height: 2rem;
-        width: 100%;
-        gap: 20px;
-    }
-
-    img.cantor-jampier {
+    .menu-mobile {
         display: none;
     }
-
-    .pacotes{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .completo,
-    .standard,
-    .simples {
-        width: 450px;
-    }
-
-    .descricao-pacotes h3 {
-        font-size: 1.6rem;
-    }
-
-    .detalhes-pacotes {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 1rem;
-    }
 }
 
-
-
+@media screen and (max-width: 375px) {
+    .hero > .btn-agendar {
+        width: 60%;
+    }
+}
