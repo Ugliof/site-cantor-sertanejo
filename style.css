@@ -72,37 +72,6 @@ html, body {
     align-items: center;
 }
 
-/* == MENU / ICON == */
-
-.menu {
-    display: none;
-}
-
-/* == LISTA NÃO ORDENADA / UL == */
-
-.menu-mobile ul {
-    display: flex;
-    gap: 45px;
-
-    list-style: none;
-}
-
-/* == LINKS DA LISTA == */
-
-.menu-mobile a {
-    color: #fff;
-    text-decoration: none;
-
-    font-family: var(--font-subtitulo);
-    font-size: 1.5rem;
-    font-weight: 500;
-}
-
-.menu-mobile a:hover {
-    text-decoration: underline;
-}
-
-
 /* == COLORS / ICONS == */
 
 #menu-hamburguer {
