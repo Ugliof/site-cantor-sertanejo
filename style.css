@@ -1,0 +1,586 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Simonetta:ital,wght@0,400;0,900;1,400;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    /* NAVBAR / COLOR */
+
+    --navbar-background: rgba(0, 0, 0, 0.288);
+
+    /* COLOR / ICONS */
+
+    --menu: #FAA630;
+    --icon-whatsapp: #1CF941;
+    --icon-instagram: #FA2800;
+
+    /* NOME-CANTOR / GRADIENTE */
+
+    --gradient-text: linear-gradient(
+        to right,
+        #ddd235,
+        #eef85e,
+        #999b0c,
+        #353203
+        );
+
+    /* BUTTON / GRADIENTE */
+
+    --button-gradiente: linear-gradient(
+        to right,
+        #08b308,
+        #32fa00
+    );
+
+    /* FONTS */
+
+    --font-biografia: "Charm", cursive;
+    --font-nome: "Rubik", sans-serif;
+    --font-subtitulo: "Simonetta", serif;
+}
+
+body {
+    font-family: var(--font-subtitulo);
+    overflow-x: hidden;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* == GRUPO-NAVBAR (BARRA DE NAVEGAÇÃO) == */
+
+.grupo-navbar {
+    background-color: var(--navbar-background);
+    padding: 2rem 4rem;
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* == COLORS / ICONS == */
+
+#menu-hamburguer {
+    color: var(--menu);
+}
+#whatsapp {
+    color: var(--icon-whatsapp);
+}
+#instagram {
+    color: var(--icon-instagram);
+}
+
+/* == ICONS / HOVER == */
+
+#whatsapp:hover {
+    color: #08b308;
+}
+
+#instagram:hover {
+    color: #a51e03;
+}
+
+#facebook:hover {
+    color: darkblue;
+}
+
+/* == HEADER / CABEÇALHO == */
+header.cabecalho {
+    background: url(imagens/fundo-header.png) no-repeat center/cover;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* == SECTION / HERO == */
+
+.hero {
+    width: 70%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* == DIV / NOME-CANTOR == */
+
+.grupo-titulo-subtitulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* == NOME / CANTOR */
+
+.h1-gradiente {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    font-family: var(--font-nome);
+    font-size: 5rem;
+    font-weight: bold;
+    letter-spacing: 6px;
+}
+
+/* == PARAGRAFO / SUBTITULO == */
+
+.subtitulo {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-family: var(--font-subtitulo);
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+/* == BUTTON AGENDAR / HERO == */ 
+
+.btn-agendar {
+    background: var(--button-gradiente);
+    width: 30%;
+    height: 40px;
+    
+
+    border-radius: 25px;
+    border: none;
+
+    font-family: var(--font-subtitulo);
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+
+    cursor: pointer;
+}
+
+/* == SECTION / SOBRE-CANTOR == */
+
+section.sobre-cantor {
+    background: url(imagens/fundo-cantor.png) no-repeat left/cover;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    min-height: 100vh;
+
+    position: relative;
+}
+
+/* == PARAGRAFO / BIOGRAFIA == */
+
+.biografia {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+    
+
+    font-family: var(--font-biografia);
+    font-size: 1.3rem;
+    font-weight: 400;
+
+    color: white;
+    width: 50%;
+    text-align: left;
+    line-height: 1.5rem;
+}
+
+/* == IMAGEM / CANTOR == */
+
+.cantor-jampier {
+    width: 50%;
+    object-fit: cover;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/* == SECTION / VALORES == */
+
+section.valores {
+    background: url(imagens/fundo-valores.png) no-repeat center/cover;
+    min-height: 100vh;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+/* == H2 / VALORES & PACOTES == */
+
+.valores h2 {
+    color: white;
+
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* == SPAN / COLOR TEXTO H2 (GRADIENTE) */
+
+.color-texto-h2 {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* == SUBTITULO-VALORES == */
+
+.subtitulo-valores {
+    color: white;
+    margin-bottom: 1.5rem;
+    
+    font-size: 1.3rem;
+}
+
+/* == DIV / PACOTES (COMPLETO, STANDARD, SIMPLES) == */
+
+.pacotes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.pacotes h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    text-align: center;
+    margin-bottom: 1.3rem;
+}
+
+/* == PACOTES (COMPLETO, STANDARD, SIMPLES) == */
+
+.completo, 
+.standard,
+.simples {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+    background: rgba(34, 34, 34, 0.192);
+    color: white;
+
+    width: 100%;
+    height: 350px;
+    padding: 2rem;
+
+    border-radius: 10px;
+    box-shadow: 0px 0px 1px 2px rgba(243, 242, 242, 0.096);
+
+}
+
+/* == DESCRIÇÃO DOS PACOTES == */
+
+.descricao-pacotes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* == VALOR DO PACOTE == */
+
+.valor-pacote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.valor {
+    color: rgb(228, 195, 8);
+
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+/* == BUTTON / CONTRATAR == */
+
+.btn-contratar {
+    background: var(--button-gradiente);
+    width: 90%;
+    cursor: pointer;
+
+    font-family: var(--font-subtitulo);
+    font-size: 1.5rem;
+    font-weight: 600;
+    
+    padding: 0.3rem;
+    border: none;
+    border-radius: 25px;
+}
+
+/* == SECTION / FORMULARIO == */
+
+section.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+    background: url(imagens/fundo-formulario.jpeg) no-repeat center/cover;
+    padding: 2.5rem;
+}
+
+/* == TITULO / H2 == */
+
+.card-formulario h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+
+    margin-bottom: 0.6rem;
+}
+
+/* == FORMULARIO == */
+
+.subtitulo-formulario {
+    font-size: 1rem;
+    font-weight: 500;
+    
+    margin-bottom: 0.8rem;
+}
+
+/* == CARD / FORMULARIO == */
+
+.card-formulario {
+    background: rgba(0, 0, 0, 0.342);
+    color: white;
+    padding: 2rem;
+
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.144);
+}
+
+/* == DIV-CAMPOS == */
+
+.campos {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    margin-bottom: 0.7rem;
+}
+
+/* == LABEL / CAIXA == */
+
+.caixa-text {
+    padding: 0.5rem;
+}
+
+/* == INPUT / CAIXA == */
+
+.nome-caixa {
+    color: #999b0c;
+
+    font-family: var(--font-nome);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* == DIV / BUTTON-FORMULARIO == */
+
+div.button-formulario {
+    display: flex;
+    justify-content: center;
+    
+    margin-top: 1.5rem;
+}
+
+/* == BUTTON-ENVIAR == */
+
+.btn-enviar {
+    background: var(--gradient-text);
+    padding: 0.5rem;
+    width: 80%;
+    cursor: pointer;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+
+    border: none;
+    border-radius: 25px;
+}
+
+/*  MEDIA QUERY (TELAS GRANDES) */
+
+@media screen and (max-width: 884px) {
+    .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .btn-agendar {
+        width: 40%;
+    }
+
+   .biografia {
+        line-height: 2rem;
+        width: 100%;
+        gap: 20px;
+    }
+
+    img.cantor-jampier {
+        display: none;
+    }
+
+    .completo,
+    .standard,
+    .simples {
+        width: 100%;
+    }
+
+    .descricao-pacotes h3 {
+        font-size: 1.3rem;
+    }
+
+    .detalhes-pacotes {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        font-size: 1rem;
+    }
+
+    .valor {
+        font-size: 1.4rem;
+        margin-top: 1rem;
+    }
+
+    .btn-contratar {
+        font-size: 1rem;
+    }
+}
+
+/* MEDIA QUERY (TELAS MENORES - MOBILE) */
+
+@media screen and (max-width: 768px) {
+
+    /* --------- SEÇÃO HERO ----------- */
+
+    section.hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+
+        width: 100%;
+        min-height: 100svh;
+        padding: 0 1rem;
+    }
+
+    /* == ICON / MENU HAMBURGUINHO == */
+
+    .menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* == H1 / JAMPIER */
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    /* == BUTTON-AGENDAR == */
+
+    .hero > .btn-agendar {
+        width: 40%;
+        height: 40px;
+    }
+
+    /* ----- SEÇÃO SOBRE O CANTOR ----- */
+
+    section.sobre-cantor {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* == IMAGEM DO CANTOR == */
+
+    img.cantor-jampier {
+        display: none;
+    }
+
+    /* == BIOGRAFIA SOBRE O CANTOR == */
+
+    .biografia {
+        line-height: 2rem;
+        width: 100%;
+        gap: 20px;
+    }
+
+    /* ------- SEÇÃO DOS PACOTES ------- */
+
+    /* == PACOTES DO SHOW == */
+
+    .pacotes{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* == H2 / VALORES & PACOTES == */
+
+    .valores h2 {
+        text-align: center;
+    }
+
+    /* == SUBTITULO VALORES == */
+    .subtitulo-valores {
+        font-size: 0.9rem;
+    }
+
+    /* ------- SEÇÃO FORMULARIO -------- */
+
+    /* == BUTÃO ENVIAR DO FORMULARIO == */
+
+    .btn-enviar {
+        font-size: 1.2rem;
+        font-weight: bold;
+        width: 100%;
+    }
+
+    .menu-mobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .hero > .btn-agendar {
+        width: 60%;
+    }
+}
