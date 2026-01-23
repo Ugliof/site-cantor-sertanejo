@@ -18,26 +18,49 @@
     /* COLOR / ICONS */
 
     --menu: #FAA630;
-    --icon-whatsapp: #1CF941;
-    --icon-instagram: #FA2800;
+    --icon-whatsapp: #FAA630;
+    --icon-instagram: #FAA630;
+    --icon-facebook: #FAA630;
 
     /* NOME-CANTOR / GRADIENTE */
 
     --gradient-text: linear-gradient(
-        to right,
-        #ddd235,
-        #eef85e,
-        #999b0c,
-        #353203
+        to bottom,
+        #e2dfba,
+        #dad397,
+        #8b7225,
+        #121311
         );
 
-    /* BUTTON / GRADIENTE */
+    /* BUTTON AGENDAR / GRADIENTE */
 
-    --button-gradiente: linear-gradient(
+    --button-agendar: linear-gradient(
         to right,
-        #08b308,
-        #32fa00
+        #9bf353,
+        #6db41c,
+        #56941c,
+        #47800f
     );
+
+    /* BUTTON CONTRATAR / GRADIENT */
+
+    --button-contratar: linear-gradient(
+        to right,
+        #9bf353,
+        #6db41c,
+        #56941c,
+        #47800f
+    );
+
+    /* BUTTON ENVIAR / GRADIENT */
+
+    --button-enviar: linear-gradient(
+        to right,
+        #e2dfba,
+        #9c965c,
+        #8b7225
+        );
+    
 
     /* FONTS */
 
@@ -58,18 +81,97 @@ html, body {
 
 /* == GRUPO-NAVBAR (BARRA DE NAVEGAÇÃO) == */
 
-.grupo-navbar {
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background-color: var(--navbar-background);
-    padding: 2rem 4rem;
+    padding: 1.5rem 4rem;
     width: 100%;
 
     position: fixed;
     top: 0;
-    left: 0;
+    z-index: 1000;
+}
 
+/* == ICONES DA NAVBAR == */
+
+.icons-navbar {
     display: flex;
     justify-content: space-between;
+    width: 90%;
+}
+
+/* == MENU HAMBURGUER == */
+
+.menu-hamburguer {
+    cursor: pointer;
+}
+
+.menu-desktop {
+    display: block;
+    justify-content: center;
     align-items: center;
+
+    background: #885e23;
+    padding: 2.5rem;
+    width: 35%;
+    height: 100vh;
+    
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+#menu-active {
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    background: #885e23;
+    padding: 2.5rem;
+    width: 35%;
+    height: 100vh;
+    
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.menu-desktop ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    font-family: var(--font-biografia);
+    font-size: 3.5rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+    list-style: none;
+}
+
+
+/* == MENU DESKTOP LINKS == */
+
+.menu-desktop ul > li > a {
+    color: white;
+    text-decoration: none;
+}
+
+/* == MENU DESKTOP / LINKS / HOVER == */
+
+.menu-desktop ul > li > a:hover {
+    text-decoration: underline;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 20px;
 }
 
 /* == COLORS / ICONS == */
@@ -83,6 +185,9 @@ html, body {
 #instagram {
     color: var(--icon-instagram);
 }
+#facebook {
+    color: var(--icon-facebook);
+}
 
 /* == ICONS / HOVER == */
 
@@ -95,7 +200,7 @@ html, body {
 }
 
 #facebook:hover {
-    color: darkblue;
+    color: #00008b;
 }
 
 /* == HEADER / CABEÇALHO == */
@@ -157,9 +262,9 @@ header.cabecalho {
 /* == BUTTON AGENDAR / HERO == */ 
 
 .btn-agendar {
-    background: var(--button-gradiente);
-    width: 30%;
-    height: 40px;
+    background: var(--button-agendar);
+    width: 25%;
+    height: 50px;
     
 
     border-radius: 25px;
@@ -325,12 +430,13 @@ section.valores {
 /* == BUTTON / CONTRATAR == */
 
 .btn-contratar {
-    background: var(--button-gradiente);
-    width: 90%;
+    background: var(--button-contratar);
+    width: 100%;
+    height: 40px;
     cursor: pointer;
 
     font-family: var(--font-subtitulo);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 600;
     
     padding: 0.3rem;
@@ -419,7 +525,7 @@ div.button-formulario {
 /* == BUTTON-ENVIAR == */
 
 .btn-enviar {
-    background: var(--gradient-text);
+    background: var(--button-enviar);
     padding: 0.5rem;
     width: 80%;
     cursor: pointer;
@@ -435,6 +541,11 @@ div.button-formulario {
 /*  MEDIA QUERY (TELAS GRANDES) */
 
 @media screen and (max-width: 884px) {
+
+    .menu-desktop {
+        width: 45%;
+    }
+    
     .hero {
         display: flex;
         flex-direction: column;
@@ -460,6 +571,7 @@ div.button-formulario {
     .standard,
     .simples {
         width: 100%;
+        padding: 0.6rem;
     }
 
     .descricao-pacotes h3 {
@@ -480,6 +592,8 @@ div.button-formulario {
     }
 
     .btn-contratar {
+        width: 80%;
+        height: 35px;
         font-size: 1rem;
     }
 }
@@ -504,7 +618,7 @@ div.button-formulario {
 
     /* == ICON / MENU HAMBURGUINHO == */
 
-    .menu {
+    .menu-hamburguer {
         display: block;
         cursor: pointer;
     }
@@ -574,8 +688,12 @@ div.button-formulario {
         width: 100%;
     }
 
-    .menu-mobile {
-        display: none;
+    .menu-desktop {
+        width: 50%;
+    }
+
+    .menu-desktop ul {
+        font-size: 2.5rem;
     }
 }
 
