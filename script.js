@@ -1,3 +1,11 @@
+const botaomenu = document.getElementById('menu-hamburguer')
+
+const menu = document.querySelector('.menu-desktop')
+
+botaomenu.addEventListener("click", () => {
+    menu.classList.toggle("ativo")
+})
+
 const botoespacote = document.querySelectorAll(".btn-contratar")
 const inputpacote = document.getElementById("ipacote")
 
@@ -5,11 +13,13 @@ botoespacote.forEach(botao => {
     botao.addEventListener("click", () => {
         const pacoteselecionado = botao.dataset.pacote
         inputpacote.value = pacoteselecionado
-    })
 
-    document
+        document
         .getElementById("formulario")
         .scrollIntoView({ behavior: "smooth" })
+    })
+
+    
 })
 
 // ENVIAR OS DADOS PARA O WHATSAPP

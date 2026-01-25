@@ -110,7 +110,7 @@ html, body {
 }
 
 .menu-desktop {
-    display: block;
+    display: flex;
     justify-content: center;
     align-items: center;
 
@@ -124,23 +124,13 @@ html, body {
     top: 0;
     right: 0;
     z-index: 100;
+
+    transform: translateX(120%);
+    transition: transform 0.4s ease-in-out;
 }
 
-#menu-active {
-    display: none;
-    justify-content: center;
-    align-items: center;
-
-    background: #885e23;
-    padding: 2.5rem;
-    width: 35%;
-    height: 100vh;
-    
-
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 100;
+.menu-desktop.ativo {
+    transform: translateX(0);
 }
 
 .menu-desktop ul {
@@ -191,16 +181,10 @@ html, body {
 
 /* == ICONS / HOVER == */
 
-#whatsapp:hover {
-    color: #08b308;
-}
-
-#instagram:hover {
-    color: #a51e03;
-}
-
+#whatsapp:hover,
+#instagram:hover,
 #facebook:hover {
-    color: #00008b;
+    color: #8b7225;
 }
 
 /* == HEADER / CABEÇALHO == */
@@ -262,7 +246,12 @@ header.cabecalho {
 /* == BUTTON AGENDAR / HERO == */ 
 
 .btn-agendar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background: var(--button-agendar);
+    color: #000000;
     width: 25%;
     height: 50px;
     
@@ -273,6 +262,7 @@ header.cabecalho {
     font-family: var(--font-subtitulo);
     font-size: 1.3rem;
     font-weight: bold;
+    text-decoration: none;
     letter-spacing: 3px;
 
     cursor: pointer;
@@ -289,6 +279,12 @@ section.sobre-cantor {
     min-height: 100vh;
 
     position: relative;
+}
+
+/* == H2 / BIOGRAFIA == */
+
+.sobre-cantor h2 {
+    text-decoration: underline;
 }
 
 /* == PARAGRAFO / BIOGRAFIA == */
@@ -398,6 +394,16 @@ section.valores {
     border-radius: 10px;
     box-shadow: 0px 0px 1px 2px rgba(243, 242, 242, 0.096);
 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* == HOVER (COMPLETO, STANDARD, SIMPLES) == */
+
+.completo:hover, 
+.standard:hover,
+.simples:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shado: 0 15px 30px rgba(0,0,0,0.3);
 }
 
 /* == DESCRIÇÃO DOS PACOTES == */
