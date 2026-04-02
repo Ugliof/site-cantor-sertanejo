@@ -69,9 +69,10 @@
     --font-subtitulo: "Simonetta", serif;
 }
 
-body {
+html, body {
     font-family: var(--font-subtitulo);
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 html, body {
@@ -114,7 +115,7 @@ html, body {
     justify-content: center;
     align-items: center;
 
-    background: #885e23;
+    background: #883a23;
     padding: 2.5rem;
     width: 35%;
     height: 100vh;
