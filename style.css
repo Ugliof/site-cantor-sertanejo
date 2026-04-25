@@ -69,16 +69,16 @@
     --font-subtitulo: "Simonetta", serif;
 }
 
+
 html, body {
     font-family: var(--font-subtitulo);
     overflow-x: hidden;
     scroll-behavior: smooth;
-}
 
-html, body {
     max-width: 100%;
     overflow-x: hidden;
 }
+
 
 /* == GRUPO-NAVBAR (BARRA DE NAVEGAÇÃO) == */
 
@@ -253,14 +253,14 @@ header.cabecalho {
 
     background: var(--button-agendar);
     color: #000000;
-    width: 25%;
-    height: 50px;
+    width: 35%;
+    height: 60px;
     
 
     border-radius: 25px;
     border: none;
 
-    font-family: var(--font-subtitulo);
+    font-family: var(--font-nome);
     font-size: 1.3rem;
     font-weight: bold;
     text-decoration: none;
@@ -309,8 +309,8 @@ section.sobre-cantor {
 
 /* == IMAGEM / CANTOR == */
 
-.cantor-jampier {
-    width: 50%;
+.cantor-venturo {
+    width: 40%;
     object-fit: cover;
 
     position: absolute;
@@ -570,7 +570,7 @@ div.button-formulario {
         gap: 20px;
     }
 
-    img.cantor-jampier {
+    img.cantor-venturo {
         display: none;
     }
 
@@ -653,7 +653,7 @@ div.button-formulario {
 
     /* == IMAGEM DO CANTOR == */
 
-    img.cantor-jampier {
+    img.cantor-venturo {
         display: none;
     }
 
